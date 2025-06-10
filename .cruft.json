@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/ggsrc/foundry-template",
+  "commit": "3ab5d256c3c331b7d6238e32d7d596fff1fa9e27",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "mytestfoundyr",
+      "project_slug": "mytestfoundyr",
+      "contact_email": "",
+      "license": "MIT",
+      "spdx_license_identifier": "MIT",
+      "use_openzeppelin": "y",
+      "use_openzeppelin_upgradeable": "y",
+      "use_zeus": "y",
+      "zeus_metadata_repo": "",
+      "use_tenderly": "n",
+      "cleanup_demo": "n",
+      "enable_auto_update": "y",
+      "_copy_without_render": [
+        ".github/**/*"
+      ],
+      "_template": "https://github.com/ggsrc/foundry-template",
+      "_commit": "3ab5d256c3c331b7d6238e32d7d596fff1fa9e27"
+    }
+  },
+  "directory": null
+}
