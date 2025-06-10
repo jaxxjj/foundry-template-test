@@ -1,0 +1,4 @@
+{
+	"zeusHost": "https://github.com/yourorgname/your-metadata-repo",
+	"migrationDirectory": "script/releases"
+}

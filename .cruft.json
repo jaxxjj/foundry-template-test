@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/ggsrc/foundry-template-cookiecutter",
+  "commit": "5f3dac16505ddf935f6fa9ffc70b3319bb6247f8",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "My Foundry Project",
+      "project_slug": "my_foundry_project",
+      "contact_email": "yc22@gmail.com",
+      "license": "GPL-3.0",
+      "use_openzeppelin": "y",
+      "use_openzeppelin_upgradeable": "y",
+      "use_zeus": "y",
+      "zeus_metadata_repo": "https://github.com/yourorgname/your-metadata-repo",
+      "cleanup_demo": "y",
+      "enable_auto_update": "y",
+      "_copy_without_render": [
+        ".github/**/*"
+      ],
+      "_template": "https://github.com/ggsrc/foundry-template-cookiecutter",
+      "_commit": "5f3dac16505ddf935f6fa9ffc70b3319bb6247f8"
+    }
+  },
+  "directory": null
+}
