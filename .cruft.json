@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/ggsrc/foundry-template-cookiecutter",
-  "commit": "5f3dac16505ddf935f6fa9ffc70b3319bb6247f8",
+  "commit": "55cba073d39c661dc4be8116dfd2bdd3b240e97b",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -18,7 +18,7 @@
         ".github/**/*"
       ],
       "_template": "https://github.com/ggsrc/foundry-template-cookiecutter",
-      "_commit": "5f3dac16505ddf935f6fa9ffc70b3319bb6247f8"
+      "_commit": "55cba073d39c661dc4be8116dfd2bdd3b240e97b"
     }
   },
   "directory": null
