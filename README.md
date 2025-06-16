@@ -77,22 +77,45 @@ If you selected Zeus during template creation, you get access to advanced deploy
 
 See the [Deployment Guide](mytestfoundyr/script/releases/README.md) for detailed Zeus usage instructions.
 
-### Tenderly Virtual TestNets
-If you selected Tenderly during template creation, you get comprehensive staging environment support:
 
-- **Virtual TestNets** with mainnet data for realistic testing
-- **Automated CI/CD deployment** to staging environments
-- **Transaction debugging** with detailed execution traces
-- **Contract verification** in Tenderly's explorer
+
+## Tenderly Virtual TestNets
+
+If you selected Tenderly during template creation, you get comprehensive staging environment support with mainnet data for realistic testing:
+
+### Key Features
+- **Virtual TestNets** with real mainnet state for comprehensive testing
+- **Automated CI/CD deployment** to staging environments via GitHub Actions
+- **Transaction debugging** with detailed execution traces and gas profiling
+- **Contract verification** in Tenderly's explorer with public links
 - **Team collaboration** with shared staging environments
 
-The integration includes:
-- **Multi-network support** (Mainnet + Base forks)
-- **Automatic wallet funding** for deployment accounts
-- **PR deployment previews** with Tenderly dashboard links
-- **Comprehensive documentation** and troubleshooting guides
+### What's Included
+- **Multi-network support** - Mainnet and Base forks with configurable chain IDs
+- **Automatic wallet funding** - 100 ETH per network for deployment accounts
+- **PR deployment previews** - Automatic deployment comments with Tenderly dashboard links
+- **Helper scripts** - `fixtures/load-fixtures.sh` with deployment utilities
+- **Comprehensive documentation** - Setup guides, troubleshooting, and customization instructions
 
-See the [Tenderly Integration Guide](mytestfoundyr/docs/TENDERLY.md) for detailed setup and usage instructions.
+### Quick Start
+```bash
+# Setup environment
+cp .env.example .env
+# Edit with your Tenderly credentials
+
+# Deploy locally
+source fixtures/load-fixtures.sh
+forge script script/deploy/SimpleToken.s.sol --broadcast
+```
+
+### CI/CD Integration
+The included `tenderly-ci-cd.yml` workflow provides:
+- **Push to main/develop** - Full deployment and testing
+- **Pull Requests** - Deploy for review with dashboard links
+- **Multi-network deployment** with artifact management
+- **Contract verification** and build artifact uploads
+
+For complete setup instructions, workflow customization, and troubleshooting guides, see the [Tenderly Integration Guide](mytestfoundyr/docs/TENDERLY.md).
 
 ## Security
 
@@ -218,12 +241,14 @@ This command will:
 The template includes several pre-configured GitHub Actions workflows located in `mytestfoundyr/.github/workflows/`:
 
 ### Core Workflows
-- **`test-template.yml`** - Runs comprehensive testing on every commit
-- **`ci.yml`** - Continuous integration for contract compilation and testing
+- **`test.yml`** - Continuous integration for contract compilation and testing
+- **`security-audit.yml`** - Comprehensive security analysis with all four security tools
+- **`typo-check.yml`** - Automated typo detection and correction
 
 ### Conditional Workflows
 - **`cruft-update.yml`** - Automatic template updates (only included if auto-update is enabled during template creation)
 - **`tenderly-ci-cd.yml`** - Tenderly Virtual TestNet deployment and testing (only included if Tenderly is selected during template creation)
+- **`validate-deployment-scripts.yml`** - Validates Zeus deployment scripts (only included if Zeus is selected during template creation)
 
 ### Setting up Automatic Template Updates
 
