@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/ggsrc/foundry-template",
+  "commit": "b813717d37f4a2e2cb5f7c3aea33cdcfd9d10854",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "My Foundry Project",
+      "project_slug": "my_foundry_project",
+      "contact_email": "123@gmail.com",
+      "license": "Apache-2.0",
+      "spdx_license_identifier": "Apache-2.0",
+      "use_openzeppelin": "y",
+      "use_openzeppelin_upgradeable": "y",
+      "use_zeus": "y",
+      "zeus_metadata_repo": "https://github.com/ggsrc/examples-metadata",
+      "use_tenderly": "n",
+      "cleanup_demo": "n",
+      "enable_auto_update": "y",
+      "_copy_without_render": [
+        ".github/**/*"
+      ],
+      "_template": "https://github.com/ggsrc/foundry-template",
+      "_commit": "b813717d37f4a2e2cb5f7c3aea33cdcfd9d10854"
+    }
+  },
+  "directory": null
+}
